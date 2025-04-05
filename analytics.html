@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ContainerSolutions | Live Analytics</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+    header {
+      background-color: #1b2a41;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+    header img {
+      height: 60px;
+      margin-right: 1rem;
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+    main {
+      padding: 2rem;
+    }
+    .graph-container {
+      margin-top: 2rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 1rem;
+      min-height: 500px;
+    }
+    footer {
+      background-color: #1b2a41;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="CS-Logo.png" alt="ContainerSolutions Logo">
+    <h1>ContainerSolutions Live Analytics</h1>
+  </header>
+
+  <main>
+    <p>This page shows live interest data related to container homes in the U.S. over the past five years.</p>
+
+    <div class="graph-container" id="google-trends-chart">
+      <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/4031_RC01/embed_loader.js"></script>
+      <script type="text/javascript">
+        trends.embed.renderExploreWidget("TIMESERIES", {
+          "comparisonItem":[{"keyword":"shipping container house","geo":"US","time":"today 5-y"}],
+          "category":0,
+          "property":""
+        }, {
+          "exploreQuery":"date=today%205-y&geo=US&q=shipping%20container%20house&hl=en",
+          "guestPath":"https://trends.google.com:443/trends/embed/"
+        });
+      </script>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 ContainerSolutions. All rights reserved.
+  </footer>
+</body>
+</html>
